@@ -1,0 +1,97 @@
+.weather-container {
+  width: 100%;
+  text-align: center;
+  animation: fade-in 0.5s ease-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Location section */
+.location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.city {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #2d2d2d;
+}
+
+.icon-gray {
+  color: #4b5563;
+}
+
+.icon-blue {
+  color: #2563eb;
+}
+
+/* Main weather info */
+.main-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.temperature {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-top: 8px;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: #374151;
+  text-transform: capitalize;
+  margin-top: 8px;
+}
+
+/* Details grid */
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  padding-top: 16px;
+}
+
+@media (min-width: 640px) {
+  .details-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Individual detail cards */
+.detail-card {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 16px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.label {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1f2937;
+}
